@@ -1,8 +1,11 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-function Greeting(){
-  return <h4> This is fahim</h4> 
-}
-
-ReactDom.render(<Greeting/>, document.querySelector('#root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
